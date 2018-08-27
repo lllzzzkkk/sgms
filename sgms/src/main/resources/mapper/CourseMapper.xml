@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lzk.sgms.dao.CourseMapper">
+
+    <resultMap id="CourseResultMap" type="cn.lzk.sgms.model.Course">
+        <id column="course_id" property="courseId"></id>
+        <result column="teacher_id" property="teacherId"></result>
+        <result column="course_name" property="courseName"></result>
+        <result column="course_property" property="courseProperty"></result>
+        <result column="attend_faculty" property="attendFaculty"></result>
+        <result column="attend_major" property="attendMajor"></result>
+        <result column="course_credit" property="courseCredit"></result>
+        <result column="course_introduction" property="courseIntroduction"></result>
+    </resultMap>
+
+    <select id="getCourse" resultMap="CourseResultMap">
+        select * from course WHERE course_id=1;
+    </select>
+</mapper>
